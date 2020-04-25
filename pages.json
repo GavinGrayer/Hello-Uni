@@ -1,0 +1,97 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index"
+		},
+		{
+			"path": "pages/list/list",
+			"style":{
+				"enablePullDownRefresh":true,/* 局部某个页面下拉刷新 */
+				"onReachBottomDistance":100/* 距离底部高度触发底部事件 */
+			}
+		},
+
+		{
+			"path": "pages/uni-style/uni-style"
+		},
+		
+		{
+			"path": "pages/home/home"
+		},
+		{
+			"path": "pages/navigator/navigator",
+			"style":{
+				"navigationBarTitleText":"信息页",
+				"navigationBarBackgroundColor":"#F0AD4E",
+				"h5":{
+					"pullToRefresh":{
+						"color":"#7D26CD"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/message/message",
+			"style":{
+				"navigationBarTitleText":"信息页",
+				"navigationBarBackgroundColor":"#F0AD4E",
+				"h5":{
+					"pullToRefresh":{
+						"color":"#7D26CD"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/contact/contact"
+		},		
+		{
+			"path": "pages/detail/detail"
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#7FFF00",
+		"backgroundColor": "#F8F8F8",
+		"enablePullDownRefresh":true,/* 开启下拉刷新 */
+		"backgroundTextStyle":"light"
+	},
+	"tabBar":{
+		"color":"#333333",
+		"selectedColor":"#DD524D",
+		"backgroundColor":"#fff",
+		"borderStyle":"black",
+		"position":"top",//小程序起作用
+		"list": [
+			{
+				"text": "首页",
+				"pagePath":"pages/index/index",
+				"iconPath":"static/tabs/home.png",//默认未选中
+				"selectedIconPath":"static/tabs/home-active.png"//选中的图案
+			},
+			{
+				"text": "信息",
+				"pagePath":"pages/message/message",
+				"iconPath":"static/tabs/message.png",
+				"selectedIconPath":"static/tabs/message-active.png"
+			},
+			{
+				"text": "我们",
+				"pagePath":"pages/contact/contact",
+				"iconPath":"static/tabs/contact.png",
+				"selectedIconPath":"static/tabs/contact-active.png"
+			}
+		]
+	}
+/* 	"condition":{ //做测试用，专门测试这页
+		"current":0,
+		"list":[
+			{
+				"name":"详情页",
+				"path":"pages/detail/detail",
+				"query":"id=80"
+			}
+		]
+	} */
+}
